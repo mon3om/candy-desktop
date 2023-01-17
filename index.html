@@ -10,54 +10,61 @@
     <link href="https://fonts.cdnfonts.com/css/shablagoo" rel="stylesheet" />
   </head>
   <body>
-    <div
-      id="div-mobile-warning"
-      style="
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #353535;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        display: none;
-      "
-    >
+    <div id="div-mobile-warning">
       <div
         style="
-          max-width: 50%;
-          max-height: 70%;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #353535;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          color: #eceedd;
         "
       >
-        <img src="./TemplateData/cone-melty.png" style="max-height: 60%" />
-        <div style="font-family: 'Shablagoo', sans-serif; font-size: 5vh">
-          WARNING!
-        </div>
-        <div style="font-family: 'Shablagoo', sans-serif; font-size: 4vh">
-          GAME IS <u>NOT</u>
-        </div>
-        <div style="font-family: 'Shablagoo', sans-serif; font-size: 3vh">
-          MOBILE FRIENDLY
-        </div>
-        <button
-          id="btn-continue"
+        <div
           style="
-            font-family: 'Lemon/Milk light';
-            background-color: transparent;
-            border: none;
-            font-size: 2vh;
-            margin-top: 1rem;
+            max-width: 50%;
+            max-height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
             color: #eceedd;
           "
         >
-          <u>TRY ANYWAY?</u>
-        </button>
+          <img src="./TemplateData/cone-melty.png" style="max-height: 60%" />
+          <div>
+            <div style="font-family: 'Shablagoo', sans-serif; font-size: 5vh">
+              WARNING!
+            </div>
+            <div style="font-family: 'Shablagoo', sans-serif; font-size: 4vh">
+              GAME IS <u>NOT</u>
+            </div>
+            <div style="font-family: 'Shablagoo', sans-serif; font-size: 3vh">
+              MOBILE FRIENDLY
+            </div>
+          </div>
+          <button
+            id="btn-continue"
+            style="background-color: transparent; border: none"
+          >
+            <div
+              style="
+                font-family: 'Lemon/Milk light';
+                background-color: transparent;
+                border: none;
+                font-size: 2vh;
+                margin-top: 1rem;
+                color: #eceedd;
+                cursor: pointer;
+              "
+            >
+              <u>TRY ANYWAY?</u>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div id="div-game" style="display: none">
@@ -199,11 +206,9 @@
           navigator.userAgent
         )
       ) {
-        document
-          .getElementById("btn-continue")
-          .addEventListener("click", () => {
-            showDiv = false;
-          });
+        document.getElementById("btn-continue").onclick = () => {
+          showDiv = false;
+        };
       } else {
         showDiv = false;
       }

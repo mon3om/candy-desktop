@@ -3,18 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Wonderful</title>
+    <title>Unity WebGL Player | SweetSugarMatch3</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <link rel="stylesheet" href="TemplateData/style.css" />
-    <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/shablagoo" rel="stylesheet" />
   </head>
-  <style>
-    @font-face {
-      font-family: "Cartoon";
-      src: url("./TemplateData/cartoon.ttf") format("truetype");
-    }
-  </style>
   <body>
     <div id="div-mobile-warning" style="display: none">
       <div
@@ -107,6 +99,7 @@
         // Modify or remove this function to customize the visually presented
         // way that non-critical warnings and error messages are presented to the
         // user.
+
         function unityShowBanner(msg, type) {
           return;
           function updateBannerVisibility() {
@@ -130,11 +123,11 @@
         }
 
         var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/mobile.loader.js";
+        var loaderUrl = buildUrl + "/des.loader.js";
         var config = {
-          dataUrl: buildUrl + "/mobile.data",
-          frameworkUrl: buildUrl + "/mobile.framework.js",
-          codeUrl: buildUrl + "/mobile.wasm",
+          dataUrl: buildUrl + "/des.data",
+          frameworkUrl: buildUrl + "/des.framework.js",
+          codeUrl: buildUrl + "/des.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "DefaultCompany",
           productName: "SweetSugarMatch3",
